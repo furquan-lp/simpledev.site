@@ -8,11 +8,15 @@ li {
   display: inline;
   margin: 5px;
   padding: 10px;
+}
+
+.topBar li,
+.topBar a {
   color: #90f6d7;
 }
 
-a:visited,
-li:visited {
+.topBar a:visited,
+.topBar li:visited {
   color: #35bcbf;
 }
 
