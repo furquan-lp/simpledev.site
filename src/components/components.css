@@ -17,11 +17,6 @@
   color: #90f6d7;
 }
 
-.topBar a:visited,
-.topBar li:visited {
-  color: #35bcbf;
-}
-
 .topBar li:hover {
   background-color: #41506b;
 }
