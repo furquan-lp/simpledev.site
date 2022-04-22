@@ -1,4 +1,10 @@
+.homeLogo {
+  padding-left: 20px;
+}
+
 .topBar ul {
+  display: flex;
+  align-items: center;
   list-style-type: none;
   margin: 10px;
   padding: 0;
@@ -23,7 +29,7 @@
 
 .topBar {
   display: flex;
-  flex-direction: row-reverse;
+  justify-content: space-between;
   background-color: #263849;
   color: white;
   padding: 5px;
