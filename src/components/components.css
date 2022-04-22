@@ -11,8 +11,9 @@ li {
   color: #90f6d7;
 }
 
+a:visited,
 li:visited {
-  color: red;
+  color: #35bcbf;
 }
 
 li:hover {
@@ -25,6 +26,6 @@ li:hover {
   background-color: #263849;
   color: white;
   padding: 5px;
-  border-radius: 3px;
+  border-radius: 5px;
   margin: 10px;
 }
