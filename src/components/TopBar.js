@@ -11,7 +11,7 @@ const HomeLogo = () =>
 const TopBar = () => {
   return (
     <div className="topBar">
-      <HomeLogo />
+      <Link to="/"><HomeLogo /></Link>
       <ul>
         <Link to="/"><li>Home</li></Link>
         <Link to="/about"><li>About</li></Link>
