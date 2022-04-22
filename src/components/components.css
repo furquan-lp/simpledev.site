@@ -1,17 +1,19 @@
-ul {
+.topBar ul {
   list-style-type: none;
   margin: 10px;
   padding: 0;
 }
 
-li {
+.topBar li {
   display: inline;
   margin: 5px;
   padding: 10px;
+  letter-spacing: 0.1em;
 }
 
 .topBar li,
 .topBar a {
+  text-decoration: none;
   color: #90f6d7;
 }
 
@@ -20,7 +22,7 @@ li {
   color: #35bcbf;
 }
 
-li:hover {
+.topBar li:hover {
   background-color: #41506b;
 }
 
