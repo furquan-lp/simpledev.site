@@ -1,11 +1,10 @@
 import { Route, Routes, Link } from 'react-router-dom';
 
 import './components.css';
-import homeLogo from '../sitelogo.png';
 
 const HomeLogo = () =>
   <div className="homeLogo">
-    <img src={homeLogo} alt="Home Logo"></img>
+    /simple dev.site
   </div>;
 
 const TopBar = () => {
