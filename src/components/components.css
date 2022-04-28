@@ -34,6 +34,7 @@
 .topBar li:hover {
   background-color: #41506b;
   color: #eeeeee;
+  border-radius: 5px;
 }
 
 .topBar {
