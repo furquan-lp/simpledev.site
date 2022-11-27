@@ -1,4 +1,7 @@
 @import 'fonts.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 .App {
   text-align: center;
@@ -14,8 +17,8 @@
   background-size: cover;
 }
 
-.App .text {
-  font-size: larger;
+.App .welcome-text {
+  font-size: 5rem;
   color: white;
   padding: 20px;
 }
