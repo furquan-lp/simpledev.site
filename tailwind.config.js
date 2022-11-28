@@ -13,7 +13,11 @@ module.exports = {
         'titlefont': ['Press\\ Start\\ 2P', 'monospace']
       },
       colors: {
-        'green-dark': '#263849'
+        'green-dark': '#263849',
+        'green-new': '#35bcbf',
+        'green-light': '#90f6d7',
+        'blue-gray': '#41506b',
+        'white-light': '#eeeeee'
       }
     },
   },
