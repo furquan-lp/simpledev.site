@@ -1,7 +1,5 @@
 import { Route, Routes, Link } from 'react-router-dom';
 
-import './components.css';
-
 const HomeLogo = () =>
   <div className="font-titlefont text-2xl py-2.5 pl-4 transition-colors duration-300 hover:text-green-new select-none">
     /simple dev.site
