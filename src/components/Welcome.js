@@ -6,7 +6,7 @@ const CarouselCard = ({ title, text, buttonLink, buttonText, image }) =>
       <div className="font-sans text-white font-bold text-4xl mb-10">{title}</div>
       <span className="font-sans text-white text-xl">{text}</span>
     </div>
-    <img className="w-3/5 max-w-full h-auto rounded-md" src={image} alt={title + " representative image"} />
+    <img className="w-7/12 max-w-full h-auto rounded-md" src={image} alt={title + " representative image"} />
   </div>;
 
 const WelcomeCarousel = () =>
