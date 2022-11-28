@@ -1,11 +1,7 @@
 @import 'fonts.css';
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-.App {
+.spy {
   text-align: center;
-  background-image: url('../public/blur-background.jpg');
 
   /* Full height */
   height: 100vh;
