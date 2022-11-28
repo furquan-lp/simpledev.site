@@ -9,14 +9,39 @@ const HomeLogo = () =>
 
 const TopBar = () => {
   return (
-    <div className="topBar flex justify-between bg-green-dark color-white p-1 m-1.5 rounded-md">
+    <div className="flex justify-between bg-green-dark text-white p-1 m-1.5 rounded-md">
       <Link to="/"><HomeLogo /></Link>
-      <ul>
-        <Link to="/"><li>Home</li></Link>
-        <Link to="/about"><li>About</li></Link>
-        <a href="https://tctp.xyz/"><li>Blog</li></a>
-        <Link to="/portfolio"><li>Portfolio</li></Link>
-        <Link to="/contact"><li>Contact</li></Link>
+      <ul className="flex items-center list-none m-1 p-0">
+        <Link className="text-green-light" to="/">
+          <li className="inline m-1 p-3 tracking-widest hover:text-white-light hover:bg-blue-gray hover:rounded-md
+          transition-all duration-200">
+            Home
+          </li>
+        </Link>
+        <Link className="text-green-light" to="/about">
+          <li className="inline m-1 p-3 tracking-widest hover:text-white-light hover:bg-blue-gray hover:rounded-md
+          transition-all duration-200">
+            About
+          </li>
+        </Link>
+        <a className="text-green-light" href="https://tctp.xyz/">
+          <li className="inline m-1 p-3 tracking-widest hover:text-white-light hover:bg-blue-gray hover:rounded-md
+          transition-all duration-200">
+            Blog
+          </li>
+        </a>
+        <Link className="text-green-light" to="/portfolio">
+          <li className="inline m-1 p-3 tracking-widest hover:text-white-light hover:bg-blue-gray hover:rounded-md
+          transition-all duration-200">
+            Portfolio
+          </li>
+        </Link>
+        <Link className="text-green-light" to="/contact">
+          <li className="inline m-1 p-3 tracking-widest hover:text-white-light hover:bg-blue-gray hover:rounded-md
+          transition-all duration-200">
+            Contact
+          </li>
+        </Link>
       </ul>
     </div>
   );
