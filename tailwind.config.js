@@ -8,6 +8,12 @@ module.exports = {
       backgroundImage: {
         'mountains-blur': "url('../public/blur-background.jpg')",
         'mountains': "url('../public/background.jpg')"
+      },
+      fontFamily: {
+        'titlefont': ['Press\\ Start\\ 2P', 'monospace']
+      },
+      colors: {
+        'green-dark': '#263849'
       }
     },
   },
