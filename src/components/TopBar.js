@@ -3,13 +3,13 @@ import { Route, Routes, Link } from 'react-router-dom';
 import './components.css';
 
 const HomeLogo = () =>
-  <div className="homeLogo">
+  <div className="font-titlefont text-2xl py-2.5 pl-4 transition-colors duration-300 hover:text-green-new select-none">
     /simple dev.site
   </div>;
 
 const TopBar = () => {
   return (
-    <div className="topBar">
+    <div className="topBar flex justify-between bg-green-dark color-white p-1 m-1.5 rounded-md">
       <Link to="/"><HomeLogo /></Link>
       <ul>
         <Link to="/"><li>Home</li></Link>
