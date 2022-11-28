@@ -6,7 +6,7 @@ const CarouselCard = ({ title, text, buttonLink, buttonText, image }) =>
       <div className="font-sans text-white font-bold text-4xl mb-10">{title}</div>
       <span className="font-sans text-white text-xl">{text}</span>
       <a
-        className="text-xl my-24 mr-auto p-2 pr-2 rounded-lg text-white underline hover:bg-white/20 hover:no-underline
+        className="text-xl my-24 mr-auto p-2 pr-2 rounded-lg text-white bg-white/20 hover:bg-transparent hover:underline
         transition-colors duration-200"
         href={buttonLink}
       >
