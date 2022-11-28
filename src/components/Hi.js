@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { FiArrowRight } from 'react-icons/fi';
 
 const HiText = () =>
   <div className="px-11 py-5">
@@ -8,11 +9,11 @@ const HiText = () =>
         <p className="md:text-5xl sm:text-xl my-1">I'm Syed</p>
         <p className="md:text-5xl sm:text-xl my-1">Aspiring Web Developer</p>
         <Link
-          className="md:text-2xl sm:text-xl my-5 p-1.5 mr-auto rounded-md bg-blue-gray hover:text-green-light
-          hover:bg-transparent hover:underline transition-all duration-200"
+          className="flex items-center md:text-2xl sm:text-xl my-5 p-1.5 mr-auto rounded-md bg-blue-gray
+          hover:text-green-light hover:bg-transparent hover:underline transition-all duration-200"
           to="/about"
         >
-          Contact Me
+          Contact Me <FiArrowRight className="ml-1" />
         </Link>
       </div>
       <div className="mx-10 px-2 w-1 h-auto bg-green-light -skew-x-12"></div>
