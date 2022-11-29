@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div className="bg-mountains-blur bg-center bg-cover bg-no-repeat">
       <TopBar />
-      <div className="flex flex-col mx-12">
+      <div className="flex flex-col md:mx-12">
         <Welcome />
         <HiCards />
         <div className="font-sans font-bold text-white text-4xl hover:underline p-10 pb-20">Goodbye!</div>
