@@ -23,11 +23,11 @@ const AboutText = ({ about }) => {
 
 const HiText = ({ hovered }) =>
   <div className="flex flex-col py-10">
-    <p className="md:text-5xl sm:text-xl my-1">Hi,</p>
-    <p className="md:text-5xl sm:text-xl my-1">I'm Syed</p>
-    <p className="md:text-5xl sm:text-xl my-1">Aspiring Web Developer</p>
+    <p className="md:text-5xl text-2xl my-1">Hi,</p>
+    <p className="md:text-5xl text-2xl my-1">I'm Syed</p>
+    <p className="md:text-5xl text-xl my-1">Aspiring Web Developer</p>
     <Link
-      className="flex items-center md:text-2xl sm:text-xl my-5 p-1.5 mr-auto rounded-md bg-blue-gray
+      className="flex items-center md:text-2xl text-xl my-5 p-1.5 mr-auto rounded-md bg-blue-gray
 hover:text-green-light hover:bg-transparent hover:underline transition-all duration-200"
       to="/about"
     >
@@ -47,7 +47,7 @@ const HiCards = () => {
         onMouseLeave={() => toggleAbout(0)}
       >
         <HiText hovered={about} />
-        <div className="mx-10 md:px-2 sm:px-px w-1 h-auto bg-green-light -skew-x-12"></div>
+        <div className="mx-10 md:px-2 w-1 h-auto bg-green-light -skew-x-12"></div>
         <AboutText about={about} />
       </div>
     </div>
