@@ -45,6 +45,7 @@ const HiCards = () => {
         className="flex justify-around my-5 mr-5 p-5 bg-green-dark/75 text-white rounded-lg"
         onMouseEnter={() => toggleAbout(1)}
         onMouseLeave={() => toggleAbout(0)}
+        onClick={() => toggleAbout(about === 0 ? 1 : 0)}
       >
         <HiText hovered={about} />
         <div className="mx-10 md:px-2 w-1 h-auto bg-green-light -skew-x-12"></div>
