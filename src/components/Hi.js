@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FiArrowRight } from 'react-icons/fi';
 
-import devImage from '../assets/dev1.png';
+import devImage from '../assets/dev3.png';
 
 const AboutText = ({ about }) => {
   if (about === 0) {
@@ -13,6 +13,7 @@ const AboutText = ({ about }) => {
   } else {
     return (
       <div className="fade-in-element transition-all delay-200 p-24 bg-green-light">
+
       </div>
     );
   }
@@ -38,7 +39,7 @@ const HiCards = () => {
   return (
     <div className="px-11 py-5">
       <div
-        className="flex justify-around my-5 mr-5 p-5 bg-green-dark text-white rounded-lg"
+        className="flex justify-around my-5 mr-5 p-5 bg-green-dark/75 text-white rounded-lg"
         onMouseEnter={() => toggleAbout(1)}
         onMouseLeave={() => toggleAbout(0)}
       >
