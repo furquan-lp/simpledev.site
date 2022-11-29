@@ -33,7 +33,11 @@ hover:text-green-light hover:bg-transparent hover:underline transition-all durat
     >
       Contact Me <FiArrowRight className="ml-1" />
     </Link>
-    {hovered === 0 ? <p className="mt-24">Hover to know more...</p> : <></>}
+    {hovered === 0 ?
+      <p className="mt-24">
+        {('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0) ?
+          <>Tap</> : <>Hover</>} to know more...
+      </p> : <></>}
   </div>;
 
 const HiCards = () => {
