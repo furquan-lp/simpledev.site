@@ -8,7 +8,7 @@ const HomeLogo = () =>
 
 const TopBar = () => {
   return (
-    <div className="flex justify-between bg-green-dark text-white p-1 m-1.5 rounded-md">
+    <div className="flex justify-between bg-green-dark text-white md:p-1 md:m-1.5 m-px rounded-md">
       <Link to="/"><HomeLogo /></Link>
       <ul className="flex items-center list-none m-1 p-0">
         <Link className="text-green-light" to="/">
