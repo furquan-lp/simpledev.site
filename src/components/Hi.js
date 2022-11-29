@@ -7,7 +7,9 @@ import devImage from '../assets/dev3.png';
 const AboutText = ({ about }) => {
   if (about === 0) {
     return (
-      <img className="fade-in-element w-1/3 max-w-auto h-auto transition-all delay-200" src={devImage}>
+      <img
+        className="fade-in-element self-center w-1/3 max-w-auto h-1/3 max-h-auto transition-all delay-200"
+        src={devImage}>
       </img>
     );
   } else {
