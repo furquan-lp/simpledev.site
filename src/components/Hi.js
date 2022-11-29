@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FiArrowRight } from 'react-icons/fi';
 
@@ -21,7 +21,7 @@ const AboutText = ({ about }) => {
   }
 }
 
-const HiText = ({ hovered }) =>
+const HiText = ({ hovered, touch }) =>
   <div className="flex flex-col py-10">
     <p className="md:text-5xl text-2xl my-1">Hi,</p>
     <p className="md:text-5xl text-2xl my-1">I'm Syed</p>
@@ -33,15 +33,17 @@ hover:text-green-light hover:bg-transparent hover:underline transition-all durat
     >
       Contact Me <FiArrowRight className="ml-1" />
     </Link>
-    {hovered === 0 ?
-      <p className="mt-24">
-        {('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0) ?
-          <>Tap</> : <>Hover</>} to know more...
-      </p> : <></>}
+    {hovered === 0 ? <p className="mt-24">{touch ? <>Tap</> : <>Hover</>} to know more...</p> : <></>}
   </div>;
 
 const HiCards = () => {
   const [about, toggleAbout] = useState(0);
+  const [isTouch, setTouch] = useState(false);
+
+  useEffect(() =>
+    ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0) ?
+      setTouch(true) : setTouch(false),
+    []);
 
   return (
     <div className="md:px-11 p-px ml-3 md:py-5 py-2">
@@ -51,7 +53,7 @@ const HiCards = () => {
         onMouseLeave={() => toggleAbout(0)}
         onClick={() => toggleAbout(about === 0 ? 1 : 0)}
       >
-        <HiText hovered={about} />
+        <HiText hovered={about} touch={isTouch} />
         <div className="mx-10 md:px-2 w-1 h-auto bg-green-light -skew-x-12"></div>
         <AboutText about={about} />
       </div>
