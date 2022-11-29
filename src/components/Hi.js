@@ -47,7 +47,7 @@ const HiCards = () => {
         onMouseLeave={() => toggleAbout(0)}
       >
         <HiText hovered={about} />
-        <div className="mx-10 px-2 w-1 h-auto bg-green-light -skew-x-12"></div>
+        <div className="mx-10 md:px-2 sm:px-px w-1 h-auto bg-green-light -skew-x-12"></div>
         <AboutText about={about} />
       </div>
     </div>
