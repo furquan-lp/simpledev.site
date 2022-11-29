@@ -40,7 +40,7 @@ const HiCards = () => {
   const [about, toggleAbout] = useState(0);
 
   return (
-    <div className="px-11 py-5">
+    <div className="md:px-11 p-px ml-3 md:py-5 py-2">
       <div
         className="flex justify-around my-5 mr-5 p-5 bg-green-dark/75 text-white rounded-lg"
         onMouseEnter={() => toggleAbout(1)}
