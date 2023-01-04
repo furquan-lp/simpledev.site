@@ -14,8 +14,21 @@ const AboutText = ({ about }) => {
     );
   } else {
     return (
-      <div className="fade-in-element transition-all delay-200 p-24 bg-green-light">
+      <div className="fade-in-element transition-all delay-200 py-10 w-1/2">
+        <div className="md:text-5xl text-2xl font-aboutfont italic">About Me</div>
+        <div className="flex flex-col justify-between md:text-xl italic py-2">
+          <div className="my-1">Hello! I'm Syed Ahmad and I like to build web applications. Ever since I remember coming
+            into contact with computers and had a vague idea of how they worked, I have loved to program.</div>
+          <div className="my-1">So far I'm learning and have worked with various JavaScript frameworks like Node, React,
+            React Native, Tailwind CSS and GatsbyJS. And I am learning everyday, furthering my skills towards the
+            eventual goal of becoming a true full stack developer. I'm based in Kolkata, India (though okay with
+            relocating, given the opportunity) and presently pursuing an undergrad degree in engineering.</div>
 
+          <div className="mt-8">If this interested you enough, maybe you'd like to see some of the <Link
+            className="underline" to="/portfolio">things I've built</Link> or perhaps you just want to  <Link
+              className="underline" to="/about">chat for a bit</Link>. I'm always actively looking for opprtunities to
+            utilize and further my skills so thank you for your time.</div>
+        </div>
       </div>
     );
   }
