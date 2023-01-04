@@ -25,9 +25,11 @@ const AboutText = ({ about }) => {
             relocating, given the opportunity) and presently pursuing an undergrad degree in engineering.</div>
 
           <div className="mt-8">If this interested you enough, maybe you'd like to see some of the <Link
-            className="underline" to="/portfolio">things I've built</Link> or perhaps you just want to  <Link
-              className="underline" to="/about">chat for a bit</Link>. I'm always actively looking for opprtunities to
-            utilize and further my skills so thank you for your time.</div>
+            className="underline hover:text-green-light hover:underline transition-all duration-200" to="/portfolio">
+            things I've built</Link> or perhaps you just want to <Link
+              className="underline hover:text-green-light hover:underline transition-all duration-200" to="/about">
+              chat for a bit</Link>. I'm always actively looking for opprtunities to utilize and further my skills so
+            thank you for your time.</div>
         </div>
       </div>
     );
