@@ -11,7 +11,8 @@ module.exports = {
         'mountains': "url('../public/background.jpg')"
       },
       fontFamily: {
-        'titlefont': ['Press\\ Start\\ 2P', 'monospace']
+        'titlefont': ['Press\\ Start\\ 2P', 'monospace'],
+        'aboutfont': ['Comfortaa', 'monospace']
       },
       colors: {
         'green-dark': '#263849',
