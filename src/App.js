@@ -14,8 +14,9 @@ const App = () => {
         <HiCards />
         <div className="font-sans font-bold text-white md:text-2xl text-lg p-10 pt-20">This website is built
           using ReactJS, Tailwind CSS and Flowbite. Check the source code <a
-            href="https://github.com/furquan-lp/simpledev.site/" className="hover:underline">here</a>. Report
-          bugs <a href="https://github.com/furquan-lp/simpledev.site/issues" className="hover:underline">here</a>.
+            href="https://github.com/furquan-lp/simpledev.site/" className="underline hover:text-green-light">here</a>.
+          Report bugs <a href="https://github.com/furquan-lp/simpledev.site/issues"
+            className="underline hover:text-green-light">here</a>.
         </div>
       </div>
       <Footer />
