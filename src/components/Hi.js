@@ -69,7 +69,7 @@ const HiCards = () => {
         onClick={() => toggleAbout(about === 0 ? 1 : 0)}
       >
         <HiText hovered={about} touch={isTouch} />
-        <div className="mx-10 md:px-2 w-1 h-auto bg-green-light -skew-x-12"></div>
+        <div className="md:mx-10 mx-2 md:px-2 w-1 h-auto md:bg-green-light -skew-x-12"></div>
         <AboutText about={about} />
       </div>
     </div>
