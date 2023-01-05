@@ -14,9 +14,9 @@ const AboutText = ({ about }) => {
     );
   } else {
     return (
-      <div className="fade-in-element transition-all delay-200 px-px py-2 md:py-8 md:w-1/2 w-full">
-        <div className="md:text-5xl text-2xl font-aboutfont italic">About Me</div>
-        <div className="flex flex-col justify-between md:text-xl italic py-2">
+      <div className="fade-in-element transition-all delay-200 px-px py-2 md:py-8 md:w-1/2 w-full -skew-x-12">
+        <div className="md:text-5xl text-2xl font-aboutfont">About Me</div>
+        <div className="flex flex-col justify-between md:text-xl py-2">
           <div className="my-1">Hello! I'm Syed Ahmad and I like to build web applications. Ever since I remember coming
             into contact with computers and had a vague idea of how they worked, I have loved to program.</div>
           <div className="my-1">So far I'm learning and have worked with various JavaScript frameworks like Node, React,
