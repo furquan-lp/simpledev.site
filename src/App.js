@@ -12,8 +12,8 @@ const App = () => {
       <div className="flex flex-col md:mx-12">
         <Welcome />
         <HiCards />
-        <div className="font-sans font-bold text-white md:text-2xl text-lg p-10 pt-20">This website is built
-          using ReactJS, Tailwind CSS and Flowbite. Check the source code <a
+        <div className="font-sans font-bold text-white text-center md:text-2xl text-lg lg:p-10 p-4 pt-20">This website
+          is built using ReactJS, Tailwind CSS and Flowbite. Check the source code <a
             href="https://github.com/furquan-lp/simpledev.site/" className="underline hover:text-green-light">here</a>.
           Report bugs <a href="https://github.com/furquan-lp/simpledev.site/issues"
             className="underline hover:text-green-light">here</a>.
