@@ -14,7 +14,7 @@ const AboutText = ({ about }) => {
     );
   } else {
     return (
-      <div className="fade-in-element transition-all delay-200 px-6 md:px py-2 md:py-10 w-1/2">
+      <div className="fade-in-element transition-all delay-200 px-6 md:px py-2 md:py-8 w-1/2">
         <div className="md:text-5xl text-2xl font-aboutfont italic">About Me</div>
         <div className="flex flex-col justify-between md:text-xl italic py-2">
           <div className="my-1">Hello! I'm Syed Ahmad and I like to build web applications. Ever since I remember coming
@@ -24,7 +24,7 @@ const AboutText = ({ about }) => {
             eventual goal of becoming a true full stack developer. I'm based in Kolkata, India (though okay with
             relocating, given the opportunity) and presently pursuing an undergrad degree in engineering.</div>
 
-          <div className="mt-8">If this interested you enough, maybe you'd like to see some of the <Link
+          <div className="mt-12">If this interested you enough, maybe you'd like to see some of the <Link
             className="underline hover:text-green-light hover:underline transition-all duration-200" to="/portfolio">
             things I've built</Link> or perhaps you just want to <Link
               className="underline hover:text-green-light hover:underline transition-all duration-200" to="/about">
