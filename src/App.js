@@ -12,7 +12,11 @@ const App = () => {
       <div className="flex flex-col md:mx-12">
         <Welcome />
         <HiCards />
-        <div className="font-sans font-bold text-white text-4xl hover:underline p-10 pb-20">Goodbye!</div>
+        <div className="font-sans font-bold text-white md:text-2xl text-lg p-10 pt-20">This website is built
+          using ReactJS, Tailwind CSS and Flowbite. Check the source code <a
+            href="https://github.com/furquan-lp/simpledev.site/" className="hover:underline">here</a>. Report
+          bugs <a href="https://github.com/furquan-lp/simpledev.site/issues" className="hover:underline">here</a>.
+        </div>
       </div>
       <Footer />
     </div>
