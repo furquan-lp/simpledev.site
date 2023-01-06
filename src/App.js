@@ -1,3 +1,5 @@
+import preval from 'preval.macro';
+
 import TopBar from './components/TopBar';
 import Welcome from './components/Welcome';
 import HiCards from './components/Hi';
@@ -15,6 +17,7 @@ const App = () => {
             href="https://github.com/furquan-lp/simpledev.site/" className="underline hover:text-green-light">here</a>.
           Report bugs <a href="https://github.com/furquan-lp/simpledev.site/issues"
             className="underline hover:text-green-light">here</a>.
+          <p>Build {preval`module.exports = new Date().toISOString();`}</p>
         </div>
       </div>
       <Footer />
