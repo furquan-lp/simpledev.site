@@ -1,5 +1,3 @@
-import logo from './logo.svg';
-
 import TopBar from './components/TopBar';
 import Welcome from './components/Welcome';
 import HiCards from './components/Hi';
