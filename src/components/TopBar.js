@@ -11,7 +11,7 @@ const TopBar = () => {
     <div className="flex justify-between bg-green-dark text-white md:p-1 md:m-1.5 m-px rounded-md">
       <Link to="/"><HomeLogo /></Link>
       <ul className="flex items-center list-none text-sm md:text-base md:m-1 p-0">
-        <Link className="text-green-light" to="/">
+        <Link className="text-green-light hidden md:inline" to="/">
           <li className="inline md:m-1 m-px md:p-3 p-1 tracking-widest hover:text-white-light hover:bg-blue-gray
           hover:rounded-md transition-all duration-200">
             Home
