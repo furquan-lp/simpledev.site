@@ -1,15 +1,15 @@
 import { Route, Routes, Link } from 'react-router-dom';
 
-const HomeLogo = () =>
+const HomeLogo = ({ path }) =>
   <div className="font-titlefont md:text-2xl text-base text-green-light py-2.5 pl-4 transition-colors duration-300
   hover:text-green-new select-none">
-    /simple dev.site
+    {path ? `/simple dev.site/${path}` : "/simple dev.site"}
   </div>;
 
-const TopBar = () => {
+const TopBar = ({ page }) => {
   return (
     <div className="flex justify-between bg-green-dark text-white md:p-1 md:m-1.5 m-px rounded-md">
-      <Link to="/"><HomeLogo /></Link>
+      <Link to="/"><HomeLogo path={page} /></Link>
       <ul className="flex items-center list-none text-sm md:text-base md:m-1 p-0">
         <Link className="text-green-light hidden md:inline" to="/">
           <li className="inline md:m-1 m-px md:p-3 p-1 tracking-widest hover:text-white-light hover:bg-blue-gray
