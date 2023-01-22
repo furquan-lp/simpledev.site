@@ -4,7 +4,7 @@ import { FiExternalLink } from 'react-icons/fi';
 
 import testimg from '../assets/dev1.jpg';
 
-const PCard = ({ title, description, source, demo, image }) =>
+const PCard = ({ title, description, source, demo, demotext, image }) =>
   <div className="flex justify-between m-2 md:m-5 px-6 py-4 shadow-md rounded-md bg-green-dark/75 text-white">
     <div className="flex flex-col">
       <span className="p-2 text-2xl md:text-5xl font-bold">{title}</span>
@@ -16,7 +16,7 @@ hover:text-green-light hover:bg-transparent hover:underline transition-all durat
         </a>
         {demo ? <a href={demo} className="flex items-center md:text-2xl text-xl my-5 p-1.5 rounded bg-blue-gray
 hover:text-green-light hover:bg-transparent hover:underline transition-all duration-200">
-          Visit demo
+          {demotext ? demotext : "Visit demo"}
           <FiExternalLink className="ml-0.5" />
         </a> : <></>}
       </div>
@@ -32,7 +32,7 @@ const Portfolio = () => {
     <div className="bg-mountains-blur bg-center bg-cover bg-no-repeat">
       <TopBar page="portfolio" />
       <div className="mx-1 md:mx-auto md:max-w-screen-xl">
-        <PCard title="Testing" description={desc} source="https://example.com" demo="https://google.com/" image={testimg} />
+        <PCard title="Testing" description={desc} source="https://example.com" demo="https://google.com/" demotext="Visit live" image={testimg} />
       </div>
       <Footer />
     </div>);
