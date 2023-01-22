@@ -10,14 +10,16 @@ const PCard = ({ title, description, source, demo, demotext, image }) =>
       <span className="p-2 text-2xl md:text-5xl font-bold">{title}</span>
       <div className="p-2 my-4 text-lg md:text-xl">{description}</div>
       <div className="flex">
-        <a href={source} className="flex items-center text-lg md:text-2xl mx-2 my-5 p-1.5 rounded bg-blue-gray
-hover:text-green-light hover:bg-transparent hover:underline transition-all duration-200">
-          Source Code <FiExternalLink className="ml-0.5" />
+        <a href={source} className="flex items-center text-lg md:text-2xl underline md:no-underline mx-2 my-5 p-1.5
+         rounded bg-blue-gray hover:text-green-light active:text-white hover:bg-transparent md:hover:underline
+          transition-all duration-200">
+          Source Code <FiExternalLink className="ml-0.5 md:h-2/3" />
         </a>
-        {demo ? <a href={demo} className="flex items-center md:text-2xl text-xl my-5 p-1.5 rounded bg-blue-gray
-hover:text-green-light hover:bg-transparent hover:underline transition-all duration-200">
+        {demo ? <a href={demo} className="flex items-center text-lg md:text-2xl underline md:no-underline mx-2 my-5
+         p-1.5 rounded bg-blue-gray hover:text-green-light active:text-white hover:bg-transparent
+          md:hover:underline transition-all duration-200">
           {demotext ? demotext : "Visit demo"}
-          <FiExternalLink className="ml-0.5" />
+          <FiExternalLink className="ml-0.5 md:h-2/3" />
         </a> : <></>}
       </div>
     </div>
