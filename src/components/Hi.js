@@ -9,7 +9,9 @@ const AboutText = ({ about }) => {
     return (
       <img
         className="fade-in-element self-center w-1/3 max-w-auto h-1/3 max-h-auto transition-all delay-200"
-        src={devImage}>
+        src={devImage}
+        alt="vector art of a developer"
+      >
       </img>
     );
   } else {
