@@ -3,7 +3,12 @@ import { Route, Routes, Link } from 'react-router-dom';
 const HomeLogo = ({ path }) =>
   <div className="font-titlefont md:text-2xl text-base text-green-light py-2.5 pl-4 transition-colors duration-300
   hover:text-green-new select-none">
-    {path ? `/simple dev.site/${path}` : "/simple dev.site"}
+    <div className="hidden md:inline">
+      {path ? `/simple dev.site/${path}` : "/simple dev.site"}
+    </div>
+    <div className="inline md:hidden">
+      /simpledev.site
+    </div>
   </div>;
 
 const TopBar = ({ page }) =>
