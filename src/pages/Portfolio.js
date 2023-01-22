@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 import testimg from '../assets/dev1.jpg';
 
 const PCard = ({ title, description, source, demo, image }) =>
-  <div className="flex justify-between m-5 px-2 py-4 shadow-md rounded-md bg-green-dark/75 text-white">
+  <div className="flex justify-between m-5 px-6 py-4 shadow-md rounded-md bg-green-dark/75 text-white">
     <div className="flex flex-col">
       <span className="p-2 text-5xl font-bold">{title}</span>
       <div className="p-2 my-4 text-xl">{description}</div>
@@ -18,11 +18,18 @@ hover:text-green-light hover:bg-transparent hover:underline transition-all durat
     <img src={image} className="w-80 h-80 rounded-lg" alt={`${title} screenshot`} />
   </div>;
 
-const Portfolio = () =>
-  <div className="bg-mountains-blur bg-center bg-cover bg-no-repeat">
-    <TopBar page="portfolio" />
-    <PCard title="Testing" description="Lorem ipsum sit dolor amet" source="https://example.com" image={testimg} />
-    <Footer />
-  </div>;
+const Portfolio = () => {
+  const desc = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+   dolore magna aliqua. Tellus mauris a diam maecenas. Nullam ac tortor vitae purus faucibus ornare suspendisse sed nisi
+   . Elementum curabitur vitae nunc sed velit dignissim sodales.`;
+  return (
+    <div className="bg-mountains-blur bg-center bg-cover bg-no-repeat">
+      <TopBar page="portfolio" />
+      <div className="mx-auto max-w-screen-xl">
+        <PCard title="Testing" description={desc} source="https://example.com" image={testimg} />
+      </div>
+      <Footer />
+    </div>);
+};
 
 export default Portfolio;
