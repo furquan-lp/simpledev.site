@@ -5,7 +5,8 @@ import { FiExternalLink } from 'react-icons/fi';
 import testimg from '../assets/dev1.jpg';
 
 const PCard = ({ title, description, source, demo, demotext, image }) =>
-  <div className="flex justify-between m-2 md:m-5 px-6 py-4 shadow-md rounded-md bg-green-dark/75 text-white">
+  <div className="flex flex-wrap md:flex-nowrap justify-between m-2 md:m-5 px-2 md:px-6 py-4 shadow-md rounded-md
+   bg-green-dark/75 text-white">
     <div className="flex flex-col">
       <span className="p-2 text-2xl md:text-5xl font-bold">{title}</span>
       <div className="p-2 my-4 text-lg md:text-xl">{description}</div>
@@ -23,7 +24,7 @@ const PCard = ({ title, description, source, demo, demotext, image }) =>
         </a> : <></>}
       </div>
     </div>
-    <img src={image} className="w-44 h-44 md:w-80 md:h-80 rounded-lg" alt={`${title} screenshot`} />
+    <img src={image} className="h-full w-80 md:h-80 rounded-lg" alt={`${title} screenshot`} />
   </div>;
 
 const Portfolio = () => {
