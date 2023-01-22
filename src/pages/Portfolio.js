@@ -7,10 +7,10 @@ import testimg from '../assets/dev1.jpg';
 const PCard = ({ title, description, source, demo, image }) =>
   <div className="flex justify-between m-2 md:m-5 px-6 py-4 shadow-md rounded-md bg-green-dark/75 text-white">
     <div className="flex flex-col">
-      <span className="p-2 text-5xl font-bold">{title}</span>
-      <div className="p-2 my-4 text-xl">{description}</div>
+      <span className="p-2 text-2xl md:text-5xl font-bold">{title}</span>
+      <div className="p-2 my-4 text-lg md:text-xl">{description}</div>
       <div className="flex">
-        <a href={source} className="flex items-center md:text-2xl text-xl mx-2 my-5 p-1.5 rounded bg-blue-gray
+        <a href={source} className="flex items-center text-lg md:text-2xl mx-2 my-5 p-1.5 rounded bg-blue-gray
 hover:text-green-light hover:bg-transparent hover:underline transition-all duration-200">
           Source Code <FiExternalLink className="ml-0.5" />
         </a>
@@ -21,7 +21,7 @@ hover:text-green-light hover:bg-transparent hover:underline transition-all durat
         </a> : <></>}
       </div>
     </div>
-    <img src={image} className="w-80 h-80 rounded-lg" alt={`${title} screenshot`} />
+    <img src={image} className="w-44 h-44 md:w-80 md:h-80 rounded-lg" alt={`${title} screenshot`} />
   </div>;
 
 const Portfolio = () => {
