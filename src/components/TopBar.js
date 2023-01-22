@@ -7,7 +7,7 @@ const HomeLogo = ({ path }) =>
   </div>;
 
 const TopBar = ({ page }) =>
-  <div className="flex justify-between bg-green-dark text-white md:p-1 md:m-1.5 m-px rounded-md">
+  <div className="flex flex-wrap md:flex-nowrap justify-between bg-green-dark text-white md:p-1 md:m-1.5 m-px rounded-md">
     <Link to="/"><HomeLogo path={page} /></Link>
     <ul className="flex items-center list-none text-sm md:text-base md:m-1 p-0">
       <Link className="text-green-light hidden md:inline" to="/">
