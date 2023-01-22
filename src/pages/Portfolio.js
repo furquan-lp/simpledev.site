@@ -34,7 +34,11 @@ const Portfolio = () => {
     <div className="bg-mountains-blur bg-center bg-cover bg-no-repeat">
       <TopBar page="portfolio" />
       <div className="mx-1 md:mx-auto md:max-w-screen-xl">
+        <p className="text-white text-4xl my-5 mx-5 font-bold">
+          Here are the projects that I've worked (and am working) on:
+        </p>
         <PCard title="Testing" description={desc} source="https://example.com" demo="https://google.com/" demotext="Visit live" image={testimg} />
+        <PCard title="Testing" description={desc} source="https://example.com" demo="https://google.com/" image={testimg} />
       </div>
       <Footer />
     </div>);
