@@ -1,5 +1,6 @@
 import TopBar from '../components/TopBar';
 import Footer from '../components/Footer';
+import { FiExternalLink } from 'react-icons/fi';
 
 import testimg from '../assets/dev1.jpg';
 
@@ -10,9 +11,14 @@ const PCard = ({ title, description, source, demo, image }) =>
       <div className="p-2 my-4 text-xl">{description}</div>
       <div className="flex">
         <a href={source} className="flex items-center md:text-2xl text-xl mx-2 my-5 p-1.5 rounded bg-blue-gray
-hover:text-green-light hover:bg-transparent hover:underline transition-all duration-200">Source Code</a>
+hover:text-green-light hover:bg-transparent hover:underline transition-all duration-200">
+          Source Code <FiExternalLink className="ml-0.5" />
+        </a>
         {demo ? <a href={demo} className="flex items-center md:text-2xl text-xl my-5 p-1.5 rounded bg-blue-gray
-hover:text-green-light hover:bg-transparent hover:underline transition-all duration-200">Visit demo</a> : <></>}
+hover:text-green-light hover:bg-transparent hover:underline transition-all duration-200">
+          Visit demo
+          <FiExternalLink className="ml-0.5" />
+        </a> : <></>}
       </div>
     </div>
     <img src={image} className="w-80 h-80 rounded-lg" alt={`${title} screenshot`} />
@@ -26,7 +32,7 @@ const Portfolio = () => {
     <div className="bg-mountains-blur bg-center bg-cover bg-no-repeat">
       <TopBar page="portfolio" />
       <div className="mx-auto max-w-screen-xl">
-        <PCard title="Testing" description={desc} source="https://example.com" image={testimg} />
+        <PCard title="Testing" description={desc} source="https://example.com" demo="https://google.com/" image={testimg} />
       </div>
       <Footer />
     </div>);
