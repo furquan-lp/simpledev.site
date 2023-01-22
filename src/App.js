@@ -4,8 +4,9 @@ import {
   Routes, Route, Link
 } from 'react-router-dom';
 
-import { About } from './pages/About';
 import Home from './pages/Home';
+import { About } from './pages/About';
+import Portfolio from './pages/Portfolio';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
+        <Route path="portfolio" element={<Portfolio />} />
       </Routes>
     </BrowserRouter>
   );
