@@ -17,8 +17,8 @@ import testimg from '../assets/dev1.jpg';
 
 const resolvePTag = (tech) => {
   switch (tech) {
-    case 'js': return { text: 'JavaScript', bg: 'bg-yellow-js', textcolor: 'text-white' }
-    case 'react': return { text: 'React', bg: 'bg-blue-react', textcolor: 'text-white' };
+    case 'js': return { text: 'JavaScript', bg: 'bg-yellow-js', textcolor: 'text-slate-800' }
+    case 'react': return { text: 'React', bg: 'bg-slate-600', textcolor: 'text-blue-react' };
     case 'react-native': return { text: 'React Native', bg: 'bg-blue-react', textcolor: 'text-white' };
     case 'tailwind': return { text: 'Tailwind CSS', bg: 'bg-blue-tailwind', textcolor: 'text-white' };
     case 'flowbite': return { text: 'Flowbite (with Tailwind)', bg: 'bg-blue-700', textcolor: 'text-white' };
@@ -46,13 +46,13 @@ const resolvePTagIcon = (tech) => {
 }
 
 const PCardTag = ({ ptag, children }) =>
-  <div className={`flex items-center rounded-lg p-1 m-1 ${ptag.bg} ${ptag.textcolor}`}>
+  <div className={`flex items-center rounded-md p-1 m-1 ${ptag.bg} ${ptag.textcolor}`}>
     {children}
     {ptag.text}
   </div>
 
 const PCardTags = ({ tech }) =>
-  <div className="flex m-1">
+  <div className="flex mx-1">
     {tech.map(t => <PCardTag ptag={resolvePTag(t)}>
       {resolvePTagIcon(t)}
     </PCardTag>
@@ -66,9 +66,7 @@ const PCard = ({ title, description, source, demo, demotext, image }) =>
       <span className="p-2 text-2xl md:text-5xl font-bold">{title}</span>
       <div className="p-2 my-4 text-lg md:text-xl">{description}</div>
 
-      <PCardTag ptag={resolvePTag('tailwind')} >
-        {resolvePTagIcon('tailwind')}
-      </PCardTag>
+      <PCardTags tech={['js', 'react', 'tailwind']} />
       <div className="flex">
         <a href={source} className="flex items-center text-lg md:text-2xl underline md:no-underline mx-2 my-5 p-1.5
          rounded bg-blue-gray hover:text-green-light active:text-white hover:bg-transparent md:hover:underline
