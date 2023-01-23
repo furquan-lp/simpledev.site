@@ -1,20 +1,47 @@
+import { FiExternalLink } from 'react-icons/fi';
+import { SiJavascript } from 'react-icons/si';
+import { SiReact } from 'react-icons/si';
+import { SiTailwindcss } from 'react-icons/si';
+import { SiGatsby } from 'react-icons/si';
+import { SiMaterialui } from 'react-icons/si';
+import { SiArduino } from 'react-icons/si';
+import { SiCplusplus } from 'react-icons/si';
+import { SiGnubash } from 'react-icons/si';
+import { MdOutlineViewCarousel } from 'react-icons/md';
+import { TbBrandReactNative } from 'react-icons/tb';
+
 import TopBar from '../components/TopBar';
 import Footer from '../components/Footer';
-import { FiExternalLink } from 'react-icons/fi';
-import { SiTailwindcss } from 'react-icons/si';
 
 import testimg from '../assets/dev1.jpg';
 
-
 const resolvePTag = (tech) => {
   switch (tech) {
+    case 'js': return { text: 'JavaScript', bg: 'bg-yellow-js', textcolor: 'text-white' }
+    case 'react': return { text: 'React', bg: 'bg-blue-react', textcolor: 'text-white' };
+    case 'react-native': return { text: 'React Native', bg: 'bg-blue-react', textcolor: 'text-white' };
     case 'tailwind': return { text: 'Tailwind CSS', bg: 'bg-blue-tailwind', textcolor: 'text-white' };
+    case 'flowbite': return { text: 'Flowbite (with Tailwind)', bg: 'bg-blue-700', textcolor: 'text-white' };
+    case 'gatsby': return { text: 'Gatsby', bg: 'bg-purple-gatsby', textcolor: 'text-white' };
+    case 'mui': return { text: 'Material UI', bg: 'bg-blue-mui', textcolor: 'text-white' };
+    case 'arduino': return { text: 'Arduino', bg: 'bg-green-arduino', textcolor: 'text-white' };
+    case 'cpp': return { text: 'C++', bg: 'bg-blue-cpp', textcolor: 'text-white' };
+    case 'bash': return { text: 'bash (shell script)', bg: 'bg-gray-bash', textcolor: 'text-white' };
   }
 }
 
 const resolvePTagIcon = (tech) => {
   switch (tech) {
-    case 'tailwind': return (<SiTailwindcss className="mr-1" />);
+    case 'js': return <SiJavascript className="mr-1" />
+    case 'react': return <SiReact className="mr-1" />;
+    case 'react-native': return <TbBrandReactNative className="mr-1" />;
+    case 'tailwind': return <SiTailwindcss className="mr-1" />;
+    case 'flowbite': return <MdOutlineViewCarousel className="mr-1" />;
+    case 'gatsby': return <SiGatsby className="mr-1" />;
+    case 'mui': return <SiMaterialui className="mr-1" />;
+    case 'arduino': return <SiArduino className="mr-1" />;
+    case 'cpp': return <SiCplusplus className="mr-1" />;
+    case 'bash': return <SiGnubash className="mr-1" />;
   }
 }
 
