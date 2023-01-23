@@ -21,6 +21,7 @@ module.exports = {
         'blue-react': '#61dafb',
         'blue-tailwind': '#38bdf8',
         'gray-bash': '#3e474a',
+        'gray-chip': '#393939',
         'green-arduino': '#008184',
         'green-dark': '#263849',
         'green-light': '#90f6d7',
