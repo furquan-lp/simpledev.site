@@ -61,14 +61,14 @@ const PCardTags = ({ tech }) =>
     )}
   </div>
 
-const PCard = ({ title, description, source, demo, demotext, image }) =>
+const PCard = ({ title, description, tech, source, demo, demotext, image }) =>
   <div className="flex flex-wrap md:flex-nowrap justify-between m-2 md:m-5 px-2 md:px-6 py-4 shadow-md rounded-md
    bg-green-dark/75 text-white">
     <div className="flex flex-col">
       <span className="p-2 text-2xl md:text-5xl font-bold">{title}</span>
       <div className="p-2 my-4 text-lg md:text-xl">{description}</div>
 
-      <PCardTags tech={['js', 'react', 'tailwind']} />
+      <PCardTags tech={tech} />
       <div className="flex">
         <a href={source} className="flex items-center text-lg md:text-2xl underline md:no-underline mx-2 my-5 p-1.5
          rounded bg-blue-gray hover:text-green-light active:text-white hover:bg-transparent md:hover:underline
@@ -86,6 +86,12 @@ const PCard = ({ title, description, source, demo, demotext, image }) =>
     <img src={image} className="h-full w-80 md:h-80 rounded-lg" alt={`${title} screenshot`} />
   </div>;
 
+const PCards = ({ projects }) =>
+  <>
+    {projects.map(p => <PCard title={p.name} description={p.description} tech={p.tech} source={p.source} demo={p.demo}
+      demotext={p.demotext} image={p.img} />)}
+  </>
+
 const Portfolio = () => {
   const desc = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
    dolore magna aliqua. Tellus mauris a diam maecenas. Nullam ac tortor vitae purus faucibus ornare suspendisse sed nisi
@@ -97,8 +103,8 @@ const Portfolio = () => {
         <p className="text-white text-2xl md:text-4xl my-5 mx-5 font-bold">
           Here are the projects that I've worked (and am working) on:
         </p>
-        <PCard title="Testing" description={desc} source="https://example.com" demo="https://google.com/" demotext="Visit live" image={testimg} />
-        <PCard title="Testing" description={desc} source="https://example.com" demo="https://google.com/" image={testimg} />
+        <PCard title="Testing" description={desc} tech={['js', 'react', 'tailwind']} source="https://example.com" demo="https://google.com/" demotext="Visit live" image={testimg} />
+        <PCard title="Testing" description={desc} tech={['js', 'cpp', 'tailwind']} source="https://example.com" demo="https://google.com/" image={testimg} />
       </div>
       <Footer />
     </div>);
