@@ -1,8 +1,16 @@
 import TopBar from '../components/TopBar';
 import Footer from '../components/Footer';
 import { FiExternalLink } from 'react-icons/fi';
+import { SiTailwindcss } from 'react-icons/si';
 
 import testimg from '../assets/dev1.jpg';
+
+
+const PCardTag = ({ text, bg, textcolor, children }) =>
+  <div className={`flex items-center rounded-lg p-1 m-1 ${bg} ${textcolor}`}>
+    {children}
+    {text}
+  </div>
 
 const PCard = ({ title, description, source, demo, demotext, image }) =>
   <div className="flex flex-wrap md:flex-nowrap justify-between m-2 md:m-5 px-2 md:px-6 py-4 shadow-md rounded-md
@@ -10,6 +18,10 @@ const PCard = ({ title, description, source, demo, demotext, image }) =>
     <div className="flex flex-col">
       <span className="p-2 text-2xl md:text-5xl font-bold">{title}</span>
       <div className="p-2 my-4 text-lg md:text-xl">{description}</div>
+
+      <PCardTag text="tailwindcss" textcolor="text-white" bg="bg-blue-tailwind" >
+        <SiTailwindcss className="mr-1" />
+      </PCardTag>
       <div className="flex">
         <a href={source} className="flex items-center text-lg md:text-2xl underline md:no-underline mx-2 my-5 p-1.5
          rounded bg-blue-gray hover:text-green-light active:text-white hover:bg-transparent md:hover:underline
