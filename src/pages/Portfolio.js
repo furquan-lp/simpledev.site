@@ -72,6 +72,14 @@ const PCardTags = ({ tech }) =>
     )}
   </div>
 
+const ExternalLinkButton = ({ linktext, link }) =>
+  <a href={link} className="flex items-center text-lg md:text-2xl underline md:no-underline mx-2 my-5 p-1.5 rounded
+  bg-blue-gray hover:text-green-light active:text-white hover:bg-transparent md:hover:underline
+transition-all duration-200">
+    {linktext}
+    <FiExternalLink className="ml-0.5 md:h-2/3" />
+  </a>;
+
 const PCard = ({ title, description, tech, source, demo, demotext, image, imgsize }) =>
   <div className="flex flex-wrap md:flex-nowrap justify-between m-2 md:m-5 px-2 md:px-6 py-4 shadow-md rounded-md
    bg-green-dark/75 text-white">
@@ -80,17 +88,9 @@ const PCard = ({ title, description, tech, source, demo, demotext, image, imgsiz
       <div className="p-2 my-4 text-lg md:text-xl">{description}</div>
       <PCardTags tech={tech} />
       <div className="flex">
-        <a href={source} className="flex items-center text-lg md:text-2xl underline md:no-underline mx-2 my-5 p-1.5
-         rounded bg-blue-gray hover:text-green-light active:text-white hover:bg-transparent md:hover:underline
-          transition-all duration-200">
-          Source Code <FiExternalLink className="ml-0.5 md:h-2/3" />
-        </a>
-        {demo ? <a href={demo} className="flex items-center text-lg md:text-2xl underline md:no-underline mx-2 my-5
-         p-1.5 rounded bg-blue-gray hover:text-green-light active:text-white hover:bg-transparent
-          md:hover:underline transition-all duration-200">
-          {demotext ? demotext : "Visit demo"}
-          <FiExternalLink className="ml-0.5 md:h-2/3" />
-        </a> : <></>}
+        <ExternalLinkButton linktext="Source Code" link={source} />
+        {demo ?
+          <ExternalLinkButton linktext={demotext ? demotext : "Visit demo"} link={source} /> : <></>}
       </div>
     </div>
     <img src={image} className={`${resolvePTagImgSize(imgsize)} rounded-lg`} alt={`${title} screenshot`} />
