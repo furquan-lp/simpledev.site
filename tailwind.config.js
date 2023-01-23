@@ -15,12 +15,19 @@ module.exports = {
         'aboutfont': ['Comfortaa', 'monospace']
       },
       colors: {
-        'green-dark': '#263849',
-        'green-new': '#35bcbf',
-        'green-light': '#90f6d7',
+        'blue-cpp': '#659ad2',
         'blue-gray': '#41506b',
+        'blue-mui': '#007fff',
+        'blue-react': '#61dafb',
         'blue-tailwind': '#38bdf8',
-        'white-light': '#eeeeee'
+        'gray-bash': '#3e474a',
+        'green-arduino': '#008184',
+        'green-dark': '#263849',
+        'green-light': '#90f6d7',
+        'green-new': '#35bcbf',
+        'purple-gatsby': '#663399',
+        'white-light': '#eeeeee',
+        'yellow-js': '#f0db4f'
       }
     },
   },
