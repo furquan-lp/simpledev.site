@@ -86,7 +86,7 @@ const PCard = ({ title, description, tech, source, demo, demotext, image }) =>
         </a> : <></>}
       </div>
     </div>
-    <img src={image} className="h-full w-80 md:h-80 rounded-lg" alt={`${title} screenshot`} />
+    <img src={image} className="h-full w-80 md:w-96 md:h-96 rounded-lg" alt={`${title} screenshot`} />
   </div>;
 
 const PCards = ({ projects }) =>
