@@ -5,12 +5,27 @@
     "tech": [
       "js",
       "react-native",
-      "c++",
+      "cpp",
       "esp32"
     ],
     "source": "https://github.com/furquan-lp/WebEnv",
     "demo": "http://webenv.simpledev.site/",
-    "img": "../assets/webenv-screenshot.webp"
+    "img": "/webenv-screenshot-thumb.webp",
+    "imgsize": "square"
+  },
+  {
+    "name": "TCTP.xyz",
+    "description": "The Chip Tinker Project blog.",
+    "tech": [
+      "js",
+      "gatsby",
+      "tailwind"
+    ],
+    "source": "https://github.com/furquan-lp/tctp.xyz",
+    "demo": "https://tctp.xyz/",
+    "demotext": "Visit live",
+    "img": "/tctp-screenshot.png",
+    "imgsize": "square"
   },
   {
     "name": "SimpleDev.site",
@@ -21,8 +36,34 @@
       "tailwind",
       "flowbite"
     ],
-    "source": "https://github.com/furquan-lp/WebEnv",
-    "demo": "http://webenv.simpledev.site/",
-    "img": "../assets/webenv-screenshot.webp"
+    "source": "https://github.com/furquan-lp/simpledev.site",
+    "demo": "https://simpledev.site/",
+    "demotext": "Visit site",
+    "img": "/sitelogo.png",
+    "imgsize": "rect"
+  },
+  {
+    "name": "Arduino-Enviro101",
+    "description": "Arduino prototype for analysing the environment and displaying the relevant data on an LCD.",
+    "tech": [
+      "cpp",
+      "arduino"
+    ],
+    "source": "https://github.com/furquan-lp/arduino-enviro101",
+    "img": "/arduino-enviro101.jpg",
+    "imgsize": "rect"
+  },
+  {
+    "name": "DevTrak (WIP)",
+    "description": "DevTrak is a simple issue/progress tracker built in React with Material UI.",
+    "tech": [
+      "js",
+      "react",
+      "mui"
+    ],
+    "source": "https://github.com/furquan-lp/devtrak",
+    "demo": "http://devtrak.simpledev.site/",
+    "img": "/devtrak-screenshot.webp",
+    "imgsize": "rect"
   }
 ]
