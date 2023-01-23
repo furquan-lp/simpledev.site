@@ -52,8 +52,8 @@ const resolvePTagIcon = (tech) => {
 
 const resolvePTagImgSize = (imgsize) => {
   switch (imgsize) {
-    case 'rect': return "md:w-96 md:h-80";
-    case 'square': return "md:w-96 md:h-96";
+    case 'rect': return "h-1/2 w-full md:w-1/2 md:h-80";
+    case 'square': return "h-full w-80 md:w-96 md:h-96";
     default: return "md-full w-full";
   }
 };
@@ -93,7 +93,7 @@ const PCard = ({ title, description, tech, source, demo, demotext, image, imgsiz
         </a> : <></>}
       </div>
     </div>
-    <img src={image} className={`h-full w-80 ${resolvePTagImgSize(imgsize)} rounded-lg`} alt={`${title} screenshot`} />
+    <img src={image} className={`${resolvePTagImgSize(imgsize)} rounded-lg`} alt={`${title} screenshot`} />
   </div>;
 
 const PCards = ({ projects }) =>
