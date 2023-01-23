@@ -14,7 +14,6 @@ import { BiMicrochip } from 'react-icons/bi';
 import TopBar from '../components/TopBar';
 import Footer from '../components/Footer';
 
-import testimg from '../assets/dev1.jpg';
 import projects from '../projects.json';
 
 const resolvePTag = (tech) => {
@@ -51,6 +50,14 @@ const resolvePTagIcon = (tech) => {
   }
 }
 
+const resolvePTagImgSize = (imgsize) => {
+  switch (imgsize) {
+    case 'rect': return "md:w-96 md:h-80";
+    case 'square': return "md:w-96 md:h-96";
+    default: return "md-full w-full";
+  }
+};
+
 const PCardTag = ({ ptag, children }) =>
   <div className={`flex items-center rounded-md p-1 m-1 text-sm md:text-base ${ptag.bg} ${ptag.textcolor}`}>
     {children}
@@ -65,7 +72,7 @@ const PCardTags = ({ tech }) =>
     )}
   </div>
 
-const PCard = ({ title, description, tech, source, demo, demotext, image }) =>
+const PCard = ({ title, description, tech, source, demo, demotext, image, imgsize }) =>
   <div className="flex flex-wrap md:flex-nowrap justify-between m-2 md:m-5 px-2 md:px-6 py-4 shadow-md rounded-md
    bg-green-dark/75 text-white">
     <div className="flex flex-col">
@@ -86,14 +93,14 @@ const PCard = ({ title, description, tech, source, demo, demotext, image }) =>
         </a> : <></>}
       </div>
     </div>
-    <img src={image} className="h-full w-80 md:w-96 md:h-96 rounded-lg" alt={`${title} screenshot`} />
+    <img src={image} className={`h-full w-80 ${resolvePTagImgSize(imgsize)} rounded-lg`} alt={`${title} screenshot`} />
   </div>;
 
 const PCards = ({ projects }) =>
   <>
     {projects.map(p => <PCard title={p.name} description={p.description} tech={p.tech} source={p.source} demo={p.demo}
-      demotext={p.demotext} image={p.img} />)}
-  </>
+      demotext={p.demotext} image={p.img} imgsize={p.imgsize} />)}
+  </>;
 
 const Portfolio = () => {
   return (
