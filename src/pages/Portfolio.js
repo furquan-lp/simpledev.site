@@ -15,6 +15,7 @@ import TopBar from '../components/TopBar';
 import Footer from '../components/Footer';
 
 import testimg from '../assets/dev1.jpg';
+import projects from '../projects.json';
 
 const resolvePTag = (tech) => {
   switch (tech) {
@@ -95,9 +96,6 @@ const PCards = ({ projects }) =>
   </>
 
 const Portfolio = () => {
-  const desc = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-   dolore magna aliqua. Tellus mauris a diam maecenas. Nullam ac tortor vitae purus faucibus ornare suspendisse sed nisi
-   . Elementum curabitur vitae nunc sed velit dignissim sodales.`;
   return (
     <div className="bg-mountains-blur bg-center bg-cover bg-no-repeat">
       <TopBar page="portfolio" />
@@ -105,8 +103,7 @@ const Portfolio = () => {
         <p className="text-white text-2xl md:text-4xl my-5 mx-5 font-bold">
           Here are the projects that I've worked (and am working) on:
         </p>
-        <PCard title="Testing" description={desc} tech={['js', 'react', 'tailwind']} source="https://example.com" demo="https://google.com/" demotext="Visit live" image={testimg} />
-        <PCard title="Testing" description={desc} tech={['js', 'cpp', 'tailwind']} source="https://example.com" demo="https://google.com/" image={testimg} />
+        <PCards projects={projects} />
       </div>
       <Footer />
     </div>);
