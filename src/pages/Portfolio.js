@@ -27,6 +27,7 @@ const resolvePTag = (tech) => {
     case 'arduino': return { text: 'Arduino', bg: 'bg-green-arduino', textcolor: 'text-white' };
     case 'cpp': return { text: 'C++', bg: 'bg-blue-cpp', textcolor: 'text-white' };
     case 'bash': return { text: 'bash (shell script)', bg: 'bg-gray-bash', textcolor: 'text-white' };
+    default: return { text: 'An error occurred', bg: 'bg-red-700', textcolor: 'text-white' };
   }
 }
 
@@ -42,6 +43,7 @@ const resolvePTagIcon = (tech) => {
     case 'arduino': return <SiArduino className="mr-1" />;
     case 'cpp': return <SiCplusplus className="mr-1" />;
     case 'bash': return <SiGnubash className="mr-1" />;
+    default: return undefined;
   }
 }
 
