@@ -52,13 +52,13 @@ const resolvePTagIcon = (tech) => {
 }
 
 const PCardTag = ({ ptag, children }) =>
-  <div className={`flex items-center rounded-md p-1 m-1 ${ptag.bg} ${ptag.textcolor}`}>
+  <div className={`flex items-center rounded-md p-1 m-1 text-sm md:text-base ${ptag.bg} ${ptag.textcolor}`}>
     {children}
     {ptag.text}
   </div>
 
 const PCardTags = ({ tech }) =>
-  <div className="flex mx-1">
+  <div className="flex flex-wrap md:flex-nowrap mx-1">
     {tech.map(t => <PCardTag ptag={resolvePTag(t)}>
       {resolvePTagIcon(t)}
     </PCardTag>
@@ -69,7 +69,7 @@ const PCard = ({ title, description, tech, source, demo, demotext, image }) =>
   <div className="flex flex-wrap md:flex-nowrap justify-between m-2 md:m-5 px-2 md:px-6 py-4 shadow-md rounded-md
    bg-green-dark/75 text-white">
     <div className="flex flex-col">
-      <span className="p-2 text-2xl md:text-5xl font-bold">{title}</span>
+      <span className="p-2 text-3xl md:text-5xl font-bold">{title}</span>
       <div className="p-2 my-4 text-lg md:text-xl">{description}</div>
       <PCardTags tech={tech} />
       <div className="flex">
