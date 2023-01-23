@@ -9,7 +9,6 @@ import testimg from '../assets/dev1.jpg';
 const resolvePTag = (tech) => {
   switch (tech) {
     case 'tailwind': return { text: 'Tailwind CSS', bg: 'bg-blue-tailwind', textcolor: 'text-white' };
-
   }
 }
 
@@ -23,6 +22,14 @@ const PCardTag = ({ ptag, children }) =>
   <div className={`flex items-center rounded-lg p-1 m-1 ${ptag.bg} ${ptag.textcolor}`}>
     {children}
     {ptag.text}
+  </div>
+
+const PCardTags = ({ tech }) =>
+  <div className="flex m-1">
+    {tech.map(t => <PCardTag ptag={resolvePTag(t)}>
+      {resolvePTagIcon(t)}
+    </PCardTag>
+    )}
   </div>
 
 const PCard = ({ title, description, source, demo, demotext, image }) =>
