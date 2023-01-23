@@ -9,6 +9,7 @@ import { SiCplusplus } from 'react-icons/si';
 import { SiGnubash } from 'react-icons/si';
 import { MdOutlineViewCarousel } from 'react-icons/md';
 import { TbBrandReactNative } from 'react-icons/tb';
+import { BiMicrochip } from 'react-icons/bi';
 
 import TopBar from '../components/TopBar';
 import Footer from '../components/Footer';
@@ -27,6 +28,7 @@ const resolvePTag = (tech) => {
     case 'arduino': return { text: 'Arduino', bg: 'bg-green-arduino', textcolor: 'text-white' };
     case 'cpp': return { text: 'C++', bg: 'bg-blue-cpp', textcolor: 'text-white' };
     case 'bash': return { text: 'bash (shell script)', bg: 'bg-gray-bash', textcolor: 'text-white' };
+    case 'esp32': return { text: 'ESP32 Microcontroller', bg: 'bg-gray-chip', textcolor: 'text-white' }
     default: return { text: 'An error occurred', bg: 'bg-red-700', textcolor: 'text-white' };
   }
 }
@@ -43,6 +45,7 @@ const resolvePTagIcon = (tech) => {
     case 'arduino': return <SiArduino className="mr-1" />;
     case 'cpp': return <SiCplusplus className="mr-1" />;
     case 'bash': return <SiGnubash className="mr-1" />;
+    case 'esp32': return <BiMicrochip className="mr-1" />
     default: return undefined;
   }
 }
@@ -67,7 +70,6 @@ const PCard = ({ title, description, tech, source, demo, demotext, image }) =>
     <div className="flex flex-col">
       <span className="p-2 text-2xl md:text-5xl font-bold">{title}</span>
       <div className="p-2 my-4 text-lg md:text-xl">{description}</div>
-
       <PCardTags tech={tech} />
       <div className="flex">
         <a href={source} className="flex items-center text-lg md:text-2xl underline md:no-underline mx-2 my-5 p-1.5
