@@ -1,0 +1,28 @@
+[
+  {
+    "name": "WebEnv",
+    "description": "WebEnv is a React Native app which fetches and displays real-time data from the ESP32 IoT device (envmon).",
+    "tech": [
+      "js",
+      "react-native",
+      "c++",
+      "esp32"
+    ],
+    "source": "https://github.com/furquan-lp/WebEnv",
+    "demo": "http://webenv.simpledev.site/",
+    "img": "../assets/webenv-screenshot.webp"
+  },
+  {
+    "name": "SimpleDev.site",
+    "description": "My personal website. You are HERE.",
+    "tech": [
+      "js",
+      "react",
+      "tailwind",
+      "flowbite"
+    ],
+    "source": "https://github.com/furquan-lp/WebEnv",
+    "demo": "http://webenv.simpledev.site/",
+    "img": "../assets/webenv-screenshot.webp"
+  }
+]
