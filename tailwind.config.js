@@ -19,6 +19,7 @@ module.exports = {
         'green-new': '#35bcbf',
         'green-light': '#90f6d7',
         'blue-gray': '#41506b',
+        'blue-tailwind': '#38bdf8',
         'white-light': '#eeeeee'
       }
     },
