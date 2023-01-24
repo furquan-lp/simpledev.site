@@ -1,4 +1,5 @@
 import { Carousel } from 'flowbite-react';
+import { FiExternalLink } from 'react-icons/fi';
 
 import webenvImg from '../assets/webenv-screenshot.webp';
 import tctpImg from '../assets/tctp-screenshot-chrome.webp';
@@ -10,12 +11,10 @@ const CarouselCard = ({ title, text, buttonLink, buttonText, image }) =>
     <div className="flex flex-col max-w-3xl mx-2">
       <div className="font-sans text-white font-bold text-4xl mb-10">{title}</div>
       <span className="font-sans text-white text-xl">{text}</span>
-      <a
-        className="text-xl my-5 mr-auto p-2 pr-2 rounded-lg text-white bg-white/20 hover:bg-transparent
-         hover:underline transition-colors duration-200"
-        href={buttonLink}
-      >
+      <a className="flex items-center text-xl my-5 mr-auto p-2 pr-2 rounded-lg text-white bg-white/20
+         hover:bg-transparent hover:underline transition-colors duration-200" href={buttonLink}>
         {buttonText}
+        <FiExternalLink className="ml-0.5 md:h-2/3" />
       </a>
     </div>
     <img className="md:w-7/12 w-1/2 h-auto rounded-md shadow-lg shadow-slate-600" src={image}
