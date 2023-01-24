@@ -66,7 +66,7 @@ const PCardTag = ({ ptag, children }) =>
 
 const PCardTags = ({ tech }) =>
   <div className="flex flex-wrap md:flex-nowrap mx-1">
-    {tech.map(t => <PCardTag ptag={resolvePTag(t)}>
+    {tech.map((t, i) => <PCardTag ptag={resolvePTag(t)} key={`${tech}${String.fromCharCode(i + 32)}${i}`}>
       {resolvePTagIcon(t)}
     </PCardTag>
     )}
@@ -98,8 +98,9 @@ const PCard = ({ title, description, tech, source, demo, demotext, image, imgsiz
 
 const PCards = ({ projects }) =>
   <>
-    {projects.map(p => <PCard title={p.name} description={p.description} tech={p.tech} source={p.source} demo={p.demo}
-      demotext={p.demotext} image={p.img} imgsize={p.imgsize} />)}
+    {projects.map((p, i) => <PCard title={p.name} description={p.description} tech={p.tech} source={p.source}
+      demo={p.demo} demotext={p.demotext} image={p.img} imgsize={p.imgsize}
+      key={`${Object.keys(p)}${String.fromCharCode(i + 32)}${i}`} />)}
   </>;
 
 const Portfolio = () => {
