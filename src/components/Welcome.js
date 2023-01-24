@@ -23,7 +23,7 @@ const CarouselCard = ({ title, text, buttonLink, buttonText, image }) =>
 
 const WelcomeCarousel = () =>
   <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
-    <Carousel>
+    <Carousel slideInterval={4000}>
       <CarouselCard title="Check out my blog!"
         text="TCTP.xyz (The Chip Tinker Project) is my blog written using Gatsby and Tailwind CSS, and hosted on a
          Netlify backend. Thanks to Tailwind CSS it has a mobile first design and it uses Netlify CMS which helps me
