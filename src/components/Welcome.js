@@ -49,10 +49,9 @@ const WelcomeCarousel = () =>
       />
       <CarouselCard title="Arduino and IoT stuff"
         text="Two years ago I was working on a project to log environmental data (air quality, temperature, humidity,
-           etc.) and display it to an LCD screen. Later on I ported the code over to C++, running it on an ESP32 board
-           which served the data over LAN using WiFi called 'envmon'. A minimal version which forwarded the data
-           over the Internet to a JSON database was used as the backend for WebEnv. This is its current (and most
-           likely final) iteration."
+         etc.) and display it to an LCD screen. Later on I ported the code over to an ESP32 board which served the
+         data over LAN WiFi called 'envmon'. A minimal version which forwarded the data over the Internet to a JSON
+         database was used as the backend for WebEnv."
         buttonLink="https://github.com/furquan-lp/environment-monitor"
         buttonText="Check out the source code"
         image={iotImg}
