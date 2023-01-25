@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FiArrowRight } from 'react-icons/fi';
+import { FiExternalLink } from 'react-icons/fi';
 
 import devImage from '../assets/dev3.png';
 
@@ -40,7 +41,7 @@ const AboutText = ({ about }) => {
 }
 
 const IconLinkButton = ({ link, linktext, external, children }) => {
-  const buttonStyle = `flex items-center md:text-2xl text-xl my-5 p-1.5 mr-auto rounded-md bg-blue-gray
+  const buttonStyle = `flex items-center md:text-2xl text-xl my-1 p-1.5 mr-auto rounded-md bg-blue-gray
   hover:text-green-light hover:bg-transparent hover:underline transition-all duration-200`;
   if (external) {
     return (<a href={link} className={buttonStyle}>
@@ -55,14 +56,20 @@ const IconLinkButton = ({ link, linktext, external, children }) => {
   }
 };
 
+const ExternalIconLinkButton = ({ link, linktext }) =>
+  <IconLinkButton link={link} linktext={linktext} external={true}>
+    <FiExternalLink className="ml-1" />
+  </IconLinkButton>;
+
 const HiText = ({ hovered, touch }) =>
   <div className="flex flex-col py-10">
     <p className="md:text-5xl text-2xl my-1">Hi,</p>
     <p className="md:text-5xl text-2xl my-1">I'm Syed</p>
-    <p className="md:text-5xl text-xl my-1">Aspiring Web Developer</p>
+    <p className="md:text-5xl text-xl mt-1 mb-5">Aspiring Web Developer</p>
     <IconLinkButton link="/about" linktext="Contact Me">
       <FiArrowRight className="ml-1" />
     </IconLinkButton>
+    <ExternalIconLinkButton link="https://example.com" linktext="Resume" />
     {hovered === 0 ? <p className="mt-24">{touch ? <>Tap</> : <>Hover</>} to know more...</p> : <></>}
   </div>;
 
