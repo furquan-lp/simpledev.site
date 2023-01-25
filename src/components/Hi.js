@@ -42,7 +42,7 @@ const AboutText = ({ about }) => {
 
 const IconLinkButton = ({ link, linktext, external, children }) => {
   const buttonStyle = `flex items-center md:text-2xl text-xl my-1 p-1.5 mr-auto rounded-md bg-blue-gray
-  hover:text-green-light hover:bg-transparent hover:underline transition-all duration-200`;
+  hover:text-green-light active:text-white hover:bg-transparent hover:underline transition-all duration-200`;
   if (external) {
     return (<a href={link} className={buttonStyle}>
       {linktext}
