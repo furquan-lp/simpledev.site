@@ -40,10 +40,10 @@ const AboutText = ({ about }) => {
   }
 }
 
-const IconLinkButton = ({ link, linktext, external, children }) => {
+const IconLinkButton = ({ link, linktext, extern, children }) => {
   const buttonStyle = `flex items-center md:text-2xl text-xl my-1 p-1.5 mr-auto rounded-md bg-blue-gray
   hover:text-green-light active:text-white hover:bg-transparent hover:underline transition-all duration-200`;
-  if (external) {
+  if (extern) {
     return (<a href={link} className={buttonStyle}>
       {linktext}
       {children}
@@ -57,7 +57,7 @@ const IconLinkButton = ({ link, linktext, external, children }) => {
 };
 
 const ExternalIconLinkButton = ({ link, linktext }) =>
-  <IconLinkButton link={link} linktext={linktext} external={true}>
+  <IconLinkButton link={link} linktext={linktext} extern={true}>
     <FiExternalLink className="ml-1" />
   </IconLinkButton>;
 
