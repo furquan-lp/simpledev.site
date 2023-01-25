@@ -39,18 +39,30 @@ const AboutText = ({ about }) => {
   }
 }
 
+const IconLinkButton = ({ link, linktext, external, children }) => {
+  const buttonStyle = `flex items-center md:text-2xl text-xl my-5 p-1.5 mr-auto rounded-md bg-blue-gray
+  hover:text-green-light hover:bg-transparent hover:underline transition-all duration-200`;
+  if (external) {
+    return (<a href={link} className={buttonStyle}>
+      {linktext}
+      {children}
+    </a>);
+  } else {
+    return (<Link className={buttonStyle} to={link}>
+      {linktext}
+      {children}
+    </Link>);
+  }
+};
+
 const HiText = ({ hovered, touch }) =>
   <div className="flex flex-col py-10">
     <p className="md:text-5xl text-2xl my-1">Hi,</p>
     <p className="md:text-5xl text-2xl my-1">I'm Syed</p>
     <p className="md:text-5xl text-xl my-1">Aspiring Web Developer</p>
-    <Link
-      className="flex items-center md:text-2xl text-xl my-5 p-1.5 mr-auto rounded-md bg-blue-gray
-hover:text-green-light hover:bg-transparent hover:underline transition-all duration-200"
-      to="/about"
-    >
-      Contact Me <FiArrowRight className="ml-1" />
-    </Link>
+    <IconLinkButton link="/about" linktext="Contact Me">
+      <FiArrowRight className="ml-1" />
+    </IconLinkButton>
     {hovered === 0 ? <p className="mt-24">{touch ? <>Tap</> : <>Hover</>} to know more...</p> : <></>}
   </div>;
 
