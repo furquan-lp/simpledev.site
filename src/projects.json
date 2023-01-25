@@ -3,8 +3,8 @@
     "name": "WebEnv",
     "description": "WebEnv is a React Native app which fetches and displays real-time data from the ESP32 IoT device (envmon).",
     "tech": [
-      "js",
       "react-native",
+      "js",
       "cpp",
       "esp32"
     ],
@@ -17,8 +17,8 @@
     "name": "TCTP.xyz",
     "description": "The Chip Tinker Project blog.",
     "tech": [
-      "js",
       "gatsby",
+      "js",
       "tailwind"
     ],
     "source": "https://github.com/furquan-lp/tctp.xyz",
@@ -31,15 +31,15 @@
     "name": "SimpleDev.site",
     "description": "My personal website. You are HERE.",
     "tech": [
-      "js",
       "react",
+      "js",
       "tailwind",
       "flowbite"
     ],
     "source": "https://github.com/furquan-lp/simpledev.site",
     "demo": "https://simpledev.site/",
     "demotext": "Visit site",
-    "img": "/sitelogo.png",
+    "img": "/simpledev-screenshot.webp",
     "imgsize": "rect"
   },
   {
@@ -57,8 +57,8 @@
     "name": "DevTrak (WIP)",
     "description": "DevTrak is a simple issue/progress tracker built in React with Material UI.",
     "tech": [
-      "js",
       "react",
+      "js",
       "mui"
     ],
     "source": "https://github.com/furquan-lp/devtrak",
