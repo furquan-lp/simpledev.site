@@ -1,7 +1,7 @@
 {
   "name": "simpledev.site",
   "homepage": "https://simpledev.site/",
-  "version": "0.7.0",
+  "version": "0.7.2",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
