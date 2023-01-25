@@ -1,8 +1,8 @@
-import { Route, Routes, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const HomeLogo = ({ path }) =>
   <div className="font-titlefont md:text-2xl text-base text-green-light py-2.5 pl-4 transition-colors duration-300
-  hover:text-green-new select-none">
+  hover:text-green-new active:text-white-light select-none">
     <div className="hidden md:inline">
       {path ? `/simple dev.site/${path}` : "/simple dev.site"}
     </div>
