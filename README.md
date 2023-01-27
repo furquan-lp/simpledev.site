@@ -1,6 +1,10 @@
 # SimpleDev.Site
 Source code for my website at https://simpledev.site/
 
+![](screenshot.png)
+
+![](screenshot-mobile.png)
+
 ## Legal
 Copyright 2023 Syed Furquan Ahmad
 
