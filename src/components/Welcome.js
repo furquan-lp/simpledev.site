@@ -22,7 +22,7 @@ const CarouselCard = ({ title, text, buttonLink, buttonText, image }) =>
   </div>;
 
 const WelcomeCarousel = () =>
-  <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
+  <div className="h-96">
     <Carousel slideInterval={4000}>
       <CarouselCard title="Check out my blog!"
         text="TCTP.xyz (The Chip Tinker Project) is my blog written using Gatsby and Tailwind CSS, and hosted on a
