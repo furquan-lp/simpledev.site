@@ -33,7 +33,7 @@ const TopBarButton = ({ link, linktext, extern, styles }) => {
 };
 
 const TopBar = ({ page }) =>
-  <div className="flex flex-wrap md:flex-nowrap justify-between bg-green-dark text-white md:p-1 md:m-1.5 m-px
+  <div className="flex flex-wrap md:flex-nowrap justify-between bg-green-dark text-white pb-2 md:p-1 md:m-1.5 m-px
    rounded-md">
     <Link to="/"><HomeLogo path={page} /></Link>
     <ul className="flex items-center list-none text-sm md:text-base md:m-1 p-0">
