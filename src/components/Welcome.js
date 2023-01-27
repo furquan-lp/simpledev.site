@@ -7,7 +7,7 @@ import iotImg from '../assets/device.gif';
 import githubImg from '../assets/github-screenshot.webp';
 
 const CarouselCard = ({ title, text, buttonLink, buttonText, image }) =>
-  <div className="flex mx-4 md:mx-10 mb-5 justify-between p-2 md:p-5">
+  <div className="flex flex-wrap md:flex-nowrap mx-4 md:mx-10 mb-5 justify-between p-2 md:p-5">
     <div className="flex flex-col md:max-w-3xl mx-2">
       <div className="font-sans text-white font-bold text-2xl md:text-4xl mb-1 md:mb-10">{title}</div>
       <span className="font-sans text-white text-sm md:text-xl">{text}</span>
@@ -17,7 +17,7 @@ const CarouselCard = ({ title, text, buttonLink, buttonText, image }) =>
         <FiExternalLink className="ml-0.5 md:h-2/3" />
       </a>
     </div>
-    <img className="md:w-7/12 w-1/2 h-auto rounded-md shadow-lg shadow-slate-600" src={image}
+    <img className="md:w-7/12 w-full h-auto rounded-md shadow-lg shadow-slate-600" src={image}
       alt={`${title} screenshot"`} />
   </div>;
 
