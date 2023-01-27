@@ -85,7 +85,7 @@ const HiCards = () => {
   return (
     <div className="md:px-11 p-px ml-3 md:py-5 py-2">
       <div
-        className="flex justify-around my-5 mr-5 p-5 bg-green-dark/75 text-white rounded-lg"
+        className="flex flex-wrap md:flex-nowrap justify-around my-5 mr-5 p-5 bg-green-dark/75 text-white rounded-lg"
         onMouseEnter={() => toggleAbout(1)}
         onMouseLeave={() => toggleAbout(0)}
         onClick={() => toggleAbout(about === 0 ? 1 : 0)}
