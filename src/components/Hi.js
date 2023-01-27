@@ -63,9 +63,9 @@ const ExternalIconLinkButton = ({ link, linktext }) =>
 
 const HiText = ({ hovered, touch }) =>
   <div className="flex flex-col py-10">
-    <p className="md:text-5xl text-2xl my-1">Hi,</p>
-    <p className="md:text-5xl text-2xl my-1">I'm Syed</p>
-    <p className="md:text-5xl text-xl mt-1 mb-5">Aspiring Web Developer</p>
+    <p className="md:text-5xl text-2xl my-1 font-aboutfont">Hi,</p>
+    <p className="md:text-5xl text-2xl my-1 font-aboutfont">I'm Syed</p>
+    <p className="md:text-5xl text-xl mt-1 mb-5 font-aboutfont">Aspiring Web Developer</p>
     <IconLinkButton link="/about" linktext="Contact Me">
       <FiArrowRight className="ml-1" />
     </IconLinkButton>
