@@ -22,31 +22,52 @@ const resolvePTag = (tech) => {
       text: 'JavaScript', bg: 'bg-yellow-js', textcolor: 'text-slate-800'
     }
     case 'react': return {
-      text: 'React', bg: 'bg-slate-600', textcolor: 'text-blue-react', link: 'https://reactjs.org/'
+      text: 'React',
+      bg: 'bg-slate-600 hover:bg-slate-600/50',
+      textcolor: 'text-blue-react',
+      link: 'https://reactjs.org/'
     };
     case 'react-native': return {
-      text: 'React Native', bg: 'bg-blue-react', textcolor: 'text-white', link: 'https://reactnative.dev/'
+      text: 'React Native',
+      bg: 'bg-blue-react hover:bg-blue-react/50',
+      textcolor: 'text-white',
+      link: 'https://reactnative.dev/'
     };
     case 'tailwind': return {
-      text: 'Tailwind CSS', bg: 'bg-blue-tailwind', textcolor: 'text-white', link: 'https://tailwindcss.com/'
+      text: 'Tailwind CSS',
+      bg: 'bg-blue-tailwind hover:bg-blue-tailwind/50',
+      textcolor: 'text-white',
+      link: 'https://tailwindcss.com/'
     };
     case 'flowbite': return {
-      text: 'Flowbite (with Tailwind)', bg: 'bg-blue-700', textcolor: 'text-white', link: 'https://flowbite.com/'
+      text: 'Flowbite (with Tailwind)',
+      bg: 'bg-blue-700 hover:bg-blue-700/50',
+      textcolor: 'text-white',
+      link: 'https://flowbite.com/'
     };
     case 'gatsby': return {
-      text: 'Gatsby', bg: 'bg-purple-gatsby', textcolor: 'text-white', link: 'https://www.gatsbyjs.com/'
+      text: 'Gatsby',
+      bg: 'bg-purple-gatsby hover:bg-purple-gatsby/50',
+      textcolor: 'text-white',
+      link: 'https://www.gatsbyjs.com/'
     };
     case 'mui': return {
-      text: 'Material UI', bg: 'bg-blue-mui', textcolor: 'text-white', link: 'https://mui.com/material-ui/'
+      text: 'Material UI',
+      bg: 'bg-blue-mui hover:bg-blue-mui/50',
+      textcolor: 'text-white',
+      link: 'https://mui.com/material-ui/'
     };
     case 'arduino': return {
-      text: 'Arduino', bg: 'bg-green-arduino', textcolor: 'text-white', link: 'https://www.arduino.cc/'
+      text: 'Arduino',
+      bg: 'bg-green-arduino hover:bg-green-arduino/50',
+      textcolor: 'text-white',
+      link: 'https://www.arduino.cc/'
     };
     case 'cpp': return { text: 'C++', bg: 'bg-blue-cpp', textcolor: 'text-white' };
     case 'bash': return { text: 'bash (shell script)', bg: 'bg-gray-bash', textcolor: 'text-white' };
     case 'esp32': return {
       text: 'ESP32 Microcontroller',
-      bg: 'bg-gray-chip',
+      bg: 'bg-gray-chip hover:bg-gray-chip/50',
       textcolor: 'text-white',
       link: 'https://www.espressif.com/en/products/socs/esp32'
     }
