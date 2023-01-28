@@ -20,7 +20,7 @@ const resolvePTag = (tech) => {
   switch (tech) {
     case 'js': return {
       text: 'JavaScript', bg: 'bg-yellow-js', textcolor: 'text-slate-800'
-    }
+    };
     case 'react': return {
       text: 'React',
       bg: 'bg-slate-600 hover:bg-slate-600/50',
@@ -70,14 +70,14 @@ const resolvePTag = (tech) => {
       bg: 'bg-gray-chip hover:bg-stone-700',
       textcolor: 'text-white',
       link: 'https://www.espressif.com/en/products/socs/esp32'
-    }
+    };
     default: return { text: 'An error occurred', bg: 'bg-red-700', textcolor: 'text-white' };
   }
-}
+};
 
 const resolvePTagIcon = (tech) => {
   switch (tech) {
-    case 'js': return <SiJavascript className="mr-1" />
+    case 'js': return <SiJavascript className="mr-1" />;
     case 'react': return <SiReact className="mr-1" />;
     case 'react-native': return <TbBrandReactNative className="mr-1" />;
     case 'tailwind': return <SiTailwindcss className="mr-1" />;
@@ -87,10 +87,10 @@ const resolvePTagIcon = (tech) => {
     case 'arduino': return <SiArduino className="mr-1" />;
     case 'cpp': return <SiCplusplus className="mr-1" />;
     case 'bash': return <SiGnubash className="mr-1" />;
-    case 'esp32': return <BiMicrochip className="mr-1" />
+    case 'esp32': return <BiMicrochip className="mr-1" />;
     default: return undefined;
   }
-}
+};
 
 const resolvePTagImgSize = (imgsize) => {
   switch (imgsize) {
@@ -123,7 +123,7 @@ const PCardTags = ({ tech }) =>
       {resolvePTagIcon(t)}
     </PCardTag>
     )}
-  </div>
+  </div>;
 
 const ExternalLinkButton = ({ linktext, link }) =>
   <a href={link} className="flex items-center text-lg md:text-2xl underline md:no-underline mx-2 my-5 p-1.5 rounded
@@ -156,18 +156,16 @@ const PCards = ({ projects }) =>
       key={`${Object.keys(p)}${String.fromCharCode(i + 32)}${i}`} />)}
   </>;
 
-const Portfolio = () => {
-  return (
-    <div className="bg-mountains-blur bg-center bg-cover bg-no-repeat">
-      <TopBar page="portfolio" />
-      <div className="mx-1 md:mx-auto md:max-w-screen-xl">
-        <p className="text-white text-2xl md:text-4xl my-5 mx-5 font-bold">
-          Here are the projects that I've worked (and am working) on:
-        </p>
-        <PCards projects={projects} />
-      </div>
-      <Footer />
-    </div>);
-};
+const Portfolio = () =>
+  <div className="bg-mountains-blur bg-center bg-cover bg-no-repeat">
+    <TopBar page="portfolio" />
+    <div className="mx-1 md:mx-auto md:max-w-screen-xl">
+      <p className="text-white text-2xl md:text-4xl my-5 mx-5 font-bold">
+        Here are the projects that I've worked (and am working) on:
+      </p>
+      <PCards projects={projects} />
+    </div>
+    <Footer />
+  </div>;
 
 export default Portfolio;
