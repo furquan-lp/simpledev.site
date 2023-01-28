@@ -67,7 +67,7 @@ const resolvePTag = (tech) => {
     case 'bash': return { text: 'bash (shell script)', bg: 'bg-gray-bash', textcolor: 'text-white' };
     case 'esp32': return {
       text: 'ESP32 Microcontroller',
-      bg: 'bg-gray-chip hover:bg-gray-chip/50',
+      bg: 'bg-gray-chip hover:bg-stone-700',
       textcolor: 'text-white',
       link: 'https://www.espressif.com/en/products/socs/esp32'
     }
@@ -104,7 +104,7 @@ const PCardTag = ({ ptag, children }) => {
   if (ptag.link) {
     return (
       <a href={ptag.link} className={`${ptag.textcolor} hover:underline`}>
-        <div className={`flex items-center rounded-md p-1 m-1 text-sm md:text-base ${ptag.bg}`}>
+        <div className={`flex items-center rounded-md p-1 m-1 text-sm md:text-base ${ptag.bg} transition-all duration-200`}>
           {children}
           {ptag.text}
         </div>
