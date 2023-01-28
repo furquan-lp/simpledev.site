@@ -79,11 +79,22 @@ const resolvePTagImgSize = (imgsize) => {
   }
 };
 
-const PCardTag = ({ ptag, children }) =>
-  <div className={`flex items-center rounded-md p-1 m-1 text-sm md:text-base ${ptag.bg} ${ptag.textcolor}`}>
-    {children}
-    {ptag.text}
-  </div>
+const PCardTag = ({ ptag, children }) => {
+  if (ptag.link) {
+    return (
+      <a href={ptag.link} className={`${ptag.textcolor} hover:underline`}>
+        <div className={`flex items-center rounded-md p-1 m-1 text-sm md:text-base ${ptag.bg}`}>
+          {children}
+          {ptag.text}
+        </div>
+      </a>);
+  } else {
+    return (<div className={`flex items-center rounded-md p-1 m-1 text-sm md:text-base ${ptag.bg} ${ptag.textcolor}`}>
+      {children}
+      {ptag.text}
+    </div>);
+  }
+};
 
 const PCardTags = ({ tech }) =>
   <div className="flex flex-wrap md:flex-nowrap mx-1">
