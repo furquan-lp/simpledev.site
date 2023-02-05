@@ -35,14 +35,14 @@ const WelcomeCarousel = () =>
       <CarouselCard title="Check out my app!"
         text="WebEnv is a React Native app which connects to an IoT backend to monitor and log environment data.
          Available for Android, iOS and the web. The IoT backend is powered by an ESP32 microcontroller which exposes a
-         REST API over an HTTP server (no HTTPS support for now)."
+         JSON API over an HTTP server (hosted on the microcontroller itself!)."
         buttonLink="http://webenv.simpledev.site"
         buttonText="Check out the live demo"
         image={webenvImg}
       />
       <CarouselCard title="Check out my GitHub!"
         text="If you want to check the source code for all my projects and want to see what I'm up to then head over
-         here. I commit frequently but no guarantees regarding code readability ;-)"
+         here. I commit frequently but no guarantees regarding documentation ;-)"
         buttonLink="https://github.com/furquan-lp"
         buttonText="Visit my GitHub"
         image={githubImg}
