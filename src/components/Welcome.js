@@ -21,6 +21,10 @@ const CarouselCard = ({ title, text, buttonLink, buttonText, image }) =>
       alt={`${title} screenshot"`} />
   </div>;
 
+/**
+ * TODO: Fetch the project data from a databse and map it to a series of CarouselCards
+ * @returns a Flowbite Carousel with a number of CarouselCards
+ */
 const WelcomeCarousel = () =>
   <div className="h-96 mt-4">
     <Carousel slideInterval={4000}>
