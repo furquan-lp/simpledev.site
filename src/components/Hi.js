@@ -69,7 +69,7 @@ const HiText = ({ hovered, touch }) =>
     <IconLinkButton link="/about" linktext="Contact Me">
       <FiArrowRight className="ml-1" />
     </IconLinkButton>
-    <ExternalIconLinkButton link="https://example.com" linktext="Resume" />
+    <ExternalIconLinkButton link="/resume-latest.pdf" linktext="Resume" />
     {hovered === 0 ? <p className="mt-24">{touch ? <>Tap</> : <>Hover</>} to know more...</p> : <></>}
   </div>;
 
